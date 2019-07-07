@@ -1,0 +1,10 @@
+<div >
+    <h5><label for="search-box">Employee Search</label></h5>
+    <input #searchBox id="search-box" (input)="search(searchBox.value)" />
+
+  <table *ngFor="let emp of employees | async">
+    <tr>
+      <td><a routerLink="/detail/{{emp.personId}}" routerLinkActive="router-link-active" > {{emp.firstName}}</a></td>
+    </tr>
+  </table>
+</div>
